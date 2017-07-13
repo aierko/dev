@@ -3,6 +3,7 @@ package com.company.HomeWork2;
 import com.company.Lesson29_lists.List;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
@@ -25,7 +26,7 @@ public class Repit {
 
     }
 
-    public static void method(List list) {
-
+    public static void method(List list) throws IOException {
+       String a = reader.readLine();
     }
 }
