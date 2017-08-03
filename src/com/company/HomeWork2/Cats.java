@@ -13,5 +13,12 @@ public class Cats {
     public static void main(String[] args) {
 
     }
+    public static class Cat{
+        String name;
+        public Cat(String n){
+            this.name = n;
+        }
+    }
+    
 
 }
