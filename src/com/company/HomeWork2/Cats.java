@@ -10,4 +10,8 @@ package com.company.HomeWork2;
  * Получить из Map множество(Set) всех имен и вывести его на экран. - convertMapToSet(Map<String, Cat> map)
  */
 public class Cats {
+    public static void main(String[] args) {
+
+    }
+
 }
