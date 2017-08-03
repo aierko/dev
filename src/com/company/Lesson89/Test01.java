@@ -11,7 +11,7 @@ public class Test01 {
     }
     public static StackTraceElement[] stack(){
         stack1();
-        StackTraceElement[] elements = Thread.currentThread().getStackTrace();
+        StackTraceElement[] elements = Thread.currentThread().getStackTrace(); //??
         return elements;
     }
     public static StackTraceElement[] stack1(){
