@@ -1,14 +1,11 @@
-package com.company.HomeWork2;
+package com.company.Lesson107;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by User on 02.08.2017.
- * /**
- * Created by User on 30.07.2017.
- * Гласные и согласные буквы
+ * Created by User on 04.08.2017.
  * Написать программу, которая вводит с клавиатуры строку текста.
  * Программа должна вывести на экран две строки:
  * 1. первая строка содержит только гласные буквы
@@ -19,39 +16,40 @@ import java.io.InputStreamReader;
  * Мама мыла раму.
  * Пример вывода:
  * а а ы а а у
+ * М м м л р м .
  */
-public class Mama {
+public class Test01 {
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
-      enterText();
+     vvod();
     }
-    public static char[] vowels = new char[]{'а', 'я', 'у', 'ю', 'и', 'ы', 'э', 'е', 'о', 'ё'};
-    public static void enterText() throws IOException {
-        String гласные = "";
-        String согласные = "";
-        char [] chars = гласные.toCharArray();
+
+    public static void vvod() throws IOException {
+        String vowel = "";
+        String consonents = "";
+        char[] chars = reader.readLine().toCharArray();
         for (int i = 0; i < chars.length; i++) {
-            if (isVowels(chars[i])){
-                гласные += chars[i] + " ";
-            }
-            else if (chars[i]==  ' '){
+            if (isVovels(chars[i])) {
+                vowel += chars[i] + " ";
+            } else if (chars[i] == ' ') {
                 continue;
-            }
-            else согласные += chars[i] + " ";
+            } else consonents += chars[i] + " ";
         }
-        System.out.println(гласные);
-        System.out.println(согласные);
-        
+        System.out.println(vowel);
+        System.out.println(consonents);
+
     }
-    public static boolean isVowels(char y){
+
+    public static boolean isVovels(char y) {
+        char[] vowels = new char[]{'а', 'я', 'у', 'ю', 'и', 'ы', 'э', 'е', 'о', 'ё'};
         y = Character.toLowerCase(y);
         for (int i = 0; i < vowels.length; i++) {
-            if (vowels[i] == y){
+            if (vowels[i] == y) {
                 return true;
             }
         }
         return false;
     }
-
 }
+
