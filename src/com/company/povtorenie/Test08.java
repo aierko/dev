@@ -2,10 +2,11 @@ package com.company.povtorenie;
 
 /**
  * Created by user on 19.10.2016.
+ * Найти минимальное число.
  */
 public class Test08 {
     public static void main(String[] args) {
-        int[] a ={65,98,78,12,-6};
+        int[] a ={65,98,78,-1,10};
         int min = a[0] ; // 65
 
         for (int i = 1; i < a.length; i++) {
