@@ -2,6 +2,8 @@ package com.company.povtorenie;
 
 /**
  * Created by user on 19.10.2016.
+ * найти сумму всех чисел
+ *
  */
 public class Test07 {
     public static void main(String[] args) {
