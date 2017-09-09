@@ -17,13 +17,13 @@ public class Test {
     }
 
     public static int[] uniqueNumber(int[] array) {
-        int[] resultArray = new int[2];
-        Arrays.sort(array);
-        int k = 0;
-        for (int number : array) {
-            int count = 0;
-            for (int i1 : array) {
-                if (number == i1) {
+        int[] resultArray = new int[2]; // обьявляем
+        Arrays.sort(array);             // сортируем
+        int k = 0;                      // инициализируем
+        for (int number : array) {      // проходимся по массиву
+            int count = 0;              // объявляем счетчик
+            for (int i1 : array) {      // проходимся по массиву
+                if (number == i1) {     //
                     count++;
                 }
             }
