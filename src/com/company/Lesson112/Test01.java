@@ -1,5 +1,7 @@
 package com.company.Lesson112;
 
+import com.company.OOP.Test03;
+
 import java.util.Arrays;
 
 /**
@@ -12,17 +14,19 @@ import java.util.Arrays;
  * Вам задан массив из n-1 целых чисел, и эти целые числа находятся в диапазоне от 0 до n.
  *   * В массиве нет дубликатов. В массиве отсутствует одно из целых чисел. Напишите эффективный код, чтобы найти недостающее целое число.
  */
-public class Test01 {
+public class Test01 extends com.company.OOP.Test03 {
     public static void main(String[] args) {
         int[] array = {0, 1, 2, 4, 5, 6, 3, 7, 8, 9, 10}; // 0,1,2,3,4,5,6,7,8;
         System.out.println(returnArrayNumber(array));
+         Test03.speed = 10;
+        System.out.println(speed);
     }
 
 
     public static int returnArrayNumber(int[] a) {
         Arrays.sort(a);
-        for (int i = 0; i < a.length-1; i++) { //0 7    9
-            if (a[i] + 1 != a[i + 1]){
+        for (int i = 0; i < a.length - 1; i++) { //0 7    9
+            if (a[i] + 1 != a[i + 1]) {
                 return a[i] + 1;
             }
         }
