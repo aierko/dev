@@ -1,6 +1,10 @@
 package com.company.Lesson117;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Created by User on 17.09.2017.
  * /**
@@ -13,7 +17,11 @@ package com.company.Lesson117;
  * Создать метод isCatNear в классе Dog, который возвращает true, если скорость собаки больше чем у кота.   5
  */
 public class Test01 {
-    public static void main(String[] args) {
+     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+    public static void main(String[] args) throws IOException {
+        Test01 test01 = new Test01();
+        test01.n();
         Dog dog = new Dog("Franc", 20);
         Cat cat = new Cat("George1", 15);
         Cat cat1 = new Cat("George", 19);
@@ -26,4 +34,9 @@ public class Test01 {
             System.out.println(" Is " + cat.getName() + " faster near " + dog.getName());
         }
     }
+
+    void n() throws IOException {
+        reader.readLine();
+    }
+
 }
