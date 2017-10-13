@@ -32,19 +32,19 @@ public class Test02 {
 //        dog.setName("Igor");
 //        System.out.println(dog.getName());
 //
-//        Test02 t1 = new Test02();
-//        Test02 t2 = new Test02();
+//        Whale t1 = new Whale();
+//        Whale t2 = new Whale();
 //        System.out.println(t1.age);
 //        System.out.println(t2.age);
 //        t1.age = 15;
 //        System.out.println(t1.age);
 //        System.out.println(t2.age);
 
-//        System.out.println(Test02.name);
-//        System.out.println(Test02.name);
-//        Test02.name = "Text";
-//        System.out.println(Test02.name);
-//        System.out.println(Test02.name);
+//        System.out.println(Whale.name);
+//        System.out.println(Whale.name);
+//        Whale.name = "Text";
+//        System.out.println(Whale.name);
+//        System.out.println(Whale.name);
     }
 }
 

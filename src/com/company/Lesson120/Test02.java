@@ -12,28 +12,28 @@ import java.util.Arrays;
 public class Test02 {
     public static void main(String[] args) {
         int[] array = new int[]{
-                12, 36, 12, 45, 78, 45, 78, 34};
+                12, 36, 12, 45, 78, 45, 78, 34, 23}; // 12 12 34 36 45 45 78 78
         array = findeTheNumber(array);
         for (int i : array) {
             System.out.println(i);
         }
     }
 
-    public static int[] findeTheNumber(int[] array) { // 0[34] 1[0]
-        int[] array1 = new int[2];
+    public static int[] findeTheNumber(int[] array) {
+        int[] array1 = new int[3];
         Arrays.sort(array);
-        int a = 0;
+        int index = 0;
 
-        for (int i : array) {
-            int count = 0;
-            for (int i1 : array) {
-                if (i == i1) {
+        for (int number1 : array) { // 34
+            int count = 0;          // 1
+            for (int number2 : array) { // 12
+                if (number1 == number2) { // 34 == 34
                     count++;
                 }
             }
-            if (count == 1) {
-                array1[a] = i;
-                a++;
+            if (count == 1) { // a = 0 ---- 0[34] 1[36]
+                array1[index] = number1;
+                index++;
             }
         }
         return array1;
