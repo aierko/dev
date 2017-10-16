@@ -1,4 +1,4 @@
-package com.company.Lesson126;
+package com.company.Lesson126.oop;
 
 /**
  * Created by User on 13.10.2017.
