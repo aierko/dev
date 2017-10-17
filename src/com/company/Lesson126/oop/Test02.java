@@ -10,15 +10,12 @@ public class Test02 {
         Cow cow = new Cow();
         Whale whale = new Whale();
         Dog dog = new Dog();
-        Cat cat = new Cat();
+        Dog1 dog1 = new Dog1();
         findClassObject(cow);
         findClassObject(whale);
         findClassObject(dog);
-        findClassObject(cat);
-     /*   System.out.println(cow);
-        System.out.println(whale);
-        System.out.println(dog);
-        System.out.println(cat);*/
+        findClassObject(dog1);
+
     }
     public static void findClassObject(Object object){
         if (object instanceof Cow){
@@ -35,4 +32,4 @@ public class Test02 {
 class Cow{}
 class Whale{}
 class Dog{}
-class Cat{}
+class Dog1{}
