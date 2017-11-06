@@ -1,5 +1,8 @@
 package com.company.Lesson130.LessonWeather;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by User on 27.10.2017.
  * /*
@@ -23,7 +26,12 @@ package com.company.Lesson130.LessonWeather;
  */
 public class Test03 {
     public static void main(String[] args) {
-
+        List<Person> plot = new ArrayList<Person>();
+        plot.add(new Person("Репка", "Репку"));
+        plot.add(new Person("Дедка", "Дедку"));
+        plot.add(new Person("Бабка", "Бабку"));
+        plot.add(new Person("Внучка", "Внучку"));
+        RepkaStory.tell(plot);
     }
 }
 class Person implements RepkaItem{
@@ -34,9 +42,15 @@ class Person implements RepkaItem{
         this.namePadegh = namePadegh;
     }
     public void pull(Person person){
-        System.out.println (String.format(" %s за %s ", name, person ));
+        System.out.println (String.format(" %s за %s ", this.name, person.namePadegh ));
     }
 }
-class RepkaStory{}
+class RepkaStory{
+    public static void tell(List<Person> plot){
+        for (int i = plot.size()-1; i > 0; i--) {
+            plot.get(i).pull(plot.get(i-1));
+        }
+    }
+}
 interface RepkaItem{}
 
