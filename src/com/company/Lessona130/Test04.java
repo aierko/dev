@@ -20,6 +20,7 @@ public class Test04 {
     public static void main(String[] args) {
         Robot robot = new Robot("jarvis");
         Robot robot1 = new Robot("valli");
+        RobotZaika robotZaika = new RobotZaika();
         doMove(robot, robot1);
         doMove(robot1, robot);
         doMove(robot, robot1);
@@ -37,9 +38,10 @@ public class Test04 {
                 , attacked
                 , defensed));
 
-        if (attacked.equals(defensed)){
+        if (attacked.equals(defensed)) {
             System.out.println(String.format("%s не нанес урон %s", robotFirst.getName(), robotSecond.getName()));
-        }else System.out.println(String.format("%s нанес урон %s", robotFirst.getName(),robotSecond.getName()));
+        } else
+            System.out.println(String.format("%s нанес урон %s по %s", robotFirst.getName(), robotSecond.getName(), attacked));
 
     }
 
@@ -60,7 +62,7 @@ class BodyPart {
         this.bodyPart = bodyPart;
     }
 
-    static final BodyPart hand = new BodyPart(" Hand ");
+    static final BodyPart hand = new BodyPart(" Hand ");  //?
     static final BodyPart leg = new BodyPart(" Leg ");
     static final BodyPart head = new BodyPart(" Head ");
     static final BodyPart breast = new BodyPart(" Breast ");
@@ -93,7 +95,7 @@ abstract class AbstractRobot implements Attackbale, Defensable {
 
     @Override
     public BodyPart attack() {
-        count = (int) (Math.random() * 4 + 1); //??
+        count = (int) (Math.random() * 4 + 1); //?? [0;1)  [0*4+1;1*4+1)
         if (count == 1) {
             return BodyPart.hand;
         } else if (count == 2) {
@@ -122,5 +124,18 @@ abstract class AbstractRobot implements Attackbale, Defensable {
 
     }
 
+}
+
+class RobotZaika implements Attackbale, Defensable {
+
+    @Override
+    public BodyPart attack() {
+        return null;
+    }
+
+    @Override
+    public BodyPart defense() {
+        return null;
+    }
 }
 
