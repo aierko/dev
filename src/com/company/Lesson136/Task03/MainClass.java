@@ -19,6 +19,6 @@ public class MainClass {
         SingletoneClass singletoneClass = SingletoneClass.getInstance();
         System.out.println(singletoneClass);
         SingletoneClass singletoneClass1 = SingletoneClass.getInstance();
-        System.out.println(singletoneClass1s);
+        System.out.println(singletoneClass);
     }
 }
