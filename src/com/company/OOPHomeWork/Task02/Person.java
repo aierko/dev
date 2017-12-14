@@ -1,5 +1,6 @@
 package com.company.OOPHomeWork.Task02;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,12 +8,16 @@ import java.util.List;
  */
 public class Person {
     String name = null;
-    private List<String> allMoney;
-
-    public Person(List<String> allMoney) {
-        this.allMoney = allMoney;
+    private List<Money> allMoney;
+    public List<Money> getAllMoney(){
+        return allMoney;
     }
-    public Person getAllMoney(){
 
+    public Person(String name,double Hriven, double USD) {
+        this.name = name;
+        this.allMoney = new ArrayList<Money>();
+        this.allMoney.add(new Hrivna(Hriven));
+        this.allMoney.add(new USD(USD));
     }
+
 }

@@ -26,7 +26,7 @@ public class Repit {
 
     }
 
-    public static void method(List list) throws IOException {
+    public static void method(List<String> list) throws IOException {
        String a = reader.readLine();
     }
 }

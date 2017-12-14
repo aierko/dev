@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 Создать массив на 10 чисел. Заполнить его числами с клавиатуры. Найти максимальное и минимальное числа в массиве.
 Вывести на экран максимальное и минимальное числа через пробел.
 */
-public class List {
+public class List<S> {
     public static void main(String[] args) throws IOException {
         int[] array = new int[10];
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
