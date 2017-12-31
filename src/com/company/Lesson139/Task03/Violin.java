@@ -8,13 +8,13 @@ import java.util.Date;
 public class Violin implements MusicalInstrument {
     @Override
     public Date startPlaying() {
-        System.out.println("Time start playing");
+        System.out.println("TimeSecond start playing");
         return new Date();
     }
 
     @Override
     public Date stopPlaying() {
-        System.out.println("Time stop playing");
+        System.out.println("TimeSecond stop playing");
         return new Date();
     }
 
